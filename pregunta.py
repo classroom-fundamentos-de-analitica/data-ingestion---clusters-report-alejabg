@@ -15,8 +15,10 @@ import re
 
 def ingest_data():
 
-   
-    
-    return df
 
+    msje = "hola"
+    
+    return msje
+
+print(ingest_data())
     
