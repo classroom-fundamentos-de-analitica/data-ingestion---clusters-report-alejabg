@@ -33,14 +33,14 @@ def ingest_data():
 
             pal.pop(0) 
             pal = " ".join(pal)
-            lista[3] += " " + pal
+            lista[3] += pal
 
-        if re.match("^ +[a-z]", elem):
+        elif re.match("^ +[a-z]", elem):
             pal = elem.split()
             pal = " ".join(pal)
             lista[3] += " " + pal
 
-        if re.match("^\n", elem) or re.match("^ +$", elem):
+        elif re.match("^\n", elem) or re.match("^ +$", elem):
             lista[3] = lista[3].replace(".","") 
             lista2.append(lista)
             lista = [0, 0, 0, ""]
