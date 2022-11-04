@@ -33,15 +33,15 @@ def ingest_data():
             lista[2] = float(porc.replace(",",".")) 
 
             pal.pop(0) 
-            pal = ' '.join(pal)
-            lista[3] += pal
+            pal = " ".join(pal)
+            lista[3] += " " + pal
 
-        elif re.match("^ +[a-z]", elem):
+        if re.match("^ +[a-z]", elem):
             pal = elem.split()
             pal = " ".join(pal)
             lista[3] += " " + pal
 
-        elif re.match("^\n", elem) or re.match("^ +$", elem):
+        if re.match("^\n", elem) or re.match("^ +$", elem):
             lista[3] = lista[3].replace(",",".") 
             lista2.append(lista)
             lista = [0, 0, 0, ""]
