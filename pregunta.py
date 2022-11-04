@@ -12,7 +12,6 @@ espacio entre palabra y palabra.
 import pandas as pd
 import re
 
-
 def ingest_data():
 
     with open('clusters_report.txt') as report:
@@ -42,7 +41,7 @@ def ingest_data():
             lista[3] += " " + pal
 
         if re.match("^\n", elem) or re.match("^ +$", elem):
-            lista[3] = lista[3].replace(",",".") 
+            lista[3] = lista[3].replace(".","") 
             lista2.append(lista)
             lista = [0, 0, 0, ""]
 
