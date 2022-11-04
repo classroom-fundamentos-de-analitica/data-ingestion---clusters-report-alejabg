@@ -25,7 +25,7 @@ def ingest_data():
     
 
     for elem in linea:
-        if re.match('^ +[0-9]+ +', elem):
+        if re.match("^ +[0-9]+ +", elem):
             num, cant, porc, *pal = elem.split()
     
             lista[0] = int(num)
@@ -36,12 +36,12 @@ def ingest_data():
             pal = ' '.join(pal)
             lista[3] += pal
 
-        if re.match("^ +[a-z]", elem):
+        elif re.match("^ +[a-z]", elem):
             pal = elem.split()
             pal = " ".join(pal)
             lista[3] += " " + pal
 
-        if re.match("^\n", elem) or re.match("^ +$", elem):
+        elif re.match("^\n", elem) or re.match("^ +$", elem):
             lista[3] = lista[3].replace(",",".") 
             lista2.append(lista)
             lista = [0, 0, 0, ""]
