@@ -45,7 +45,9 @@ def ingest_data():
             lista2.append(lista)
             lista = [0, 0, 0, ""]
 
-    salida = pd.DataFrame(lista2, columns = ["cluster", "cantidad_de_palabras_clave", "porcentaje_de_palabras_clave", "principales_palabras_clave"])
+    cols = ['cluster', 'cantidad_de_palabras_clave', 'porcentaje_de_palabras_clave', 'principales_palabras_clave']
+
+    salida = pd.DataFrame(lista2, columns = cols)
     
     return salida
 
