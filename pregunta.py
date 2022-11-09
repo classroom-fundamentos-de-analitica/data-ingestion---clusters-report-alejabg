@@ -29,7 +29,8 @@ def ingest_data():
     
             lista[0] = int(num)
             lista[1] = int(cant)
-            lista[2] = float(porc.replace(",",".")) 
+            porc.replace(",",".")
+            lista[2] = float(porc) 
 
             pal.pop(0) 
             pal = " ".join(pal)
